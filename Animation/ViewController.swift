@@ -6,14 +6,20 @@
 //
 
 import UIKit
-
+import Lottie
 class ViewController: UIViewController {
 
+    var animationV = AnimationView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //animationV.animation = Animation.named("heart")
+        animationV.animation = Animation.named("icecream")
+        animationV.frame = view.bounds
+        animationV.backgroundColor = .black
+        animationV.contentMode = .scaleAspectFit
+        animationV.play()
+        animationV.loopMode = .loop
+        view.addSubview(animationV)
     }
-
-
 }
 
